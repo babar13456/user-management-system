@@ -1,0 +1,33 @@
+{% extends 'links.html' %}
+
+{% block content %}
+
+{% include 'navbar.html' %}
+
+	<div class="container" style="width: 40%; margin-top: 50px; background-color: grey; padding: 40px;">
+		<form autocomplete="0" action="{% url 'login_check' %}" method="post">
+			{% csrf_token %}
+
+			{% include 'messages.html' %}
+
+			<div class="row text-white text-center">
+				<div class="col-sm-12">
+					<h4>USER LOGIN</h4>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-sm-12">
+					<input type="text" name="username" class="form-control" placeholder="Enter Username">
+				</div>
+				<div class="col-sm-12 mt-4">
+					<input type="password" name="password" class="form-control" placeholder="Enter Username">
+				</div>
+			</div>
+			<hr>
+			<input type="submit" class="btn btn-success" name="" value="Login">
+			<a href="{% url 'sign_up' %}" class="btn btn-info float-right">Register</a>
+		</form>
+	</div>
+
+{% endblock %}
