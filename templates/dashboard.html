@@ -2,33 +2,12 @@
 
 {% block content %}
 
-<h5>Menu 1</h5>
-{% include 'navbar.html' %}
+{% include 'navbar2.html' %}
 
 	<div class="container pt-3">
-		<h4>User Dashboard</h4>
-		<h5>Secret Information</h5>
+		<h4>Welcome To Dashboard</h4>
 		<hr>
 		{% include 'messages.html' %}
-	</div>
-
-	<div class="container">
-		<table>
-			<thead>
-				<tr>
-					<th>First Name</th>
-					<th>Last Name</th>
-					<th>Email</th>
-					<th>Username</th>
-				</tr>
-			</thead>
-			<tbody>
-			</tbody>
-		</table>
-	</div>
-
-	<div class="container">
-		<a href="{% url 'logout' %}" class="btn btn-success btn-sm">Logout</a>
 	</div>
 
 {% endblock %}

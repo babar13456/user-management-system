@@ -2,21 +2,12 @@
 
 {% block content %}
 
-{% include 'navbar.html' %}
-
-<br>
-
 {% include 'navbar2.html' %}
 
 	<div class="container pt-3">
 		<h4>HOME PAGE</h4>
 		<hr>
 		{% include 'messages.html' %}
-	</div>
-
-	<div class="container mt-4">
-		<h3>Click For Sign Up</h3>
-		<a href="{% url 'sign_up' %}" class="btn btn-primary btn-sm">Sign Up Here</a>
 	</div>
 
 {% endblock %}
